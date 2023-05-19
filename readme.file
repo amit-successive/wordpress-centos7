@@ -1,0 +1,6 @@
+Remember to save the script to a file, e.g., setup_wordpress_stack.sh, and make it executable with the following command:
+chmod +x setup_wordpress_stack.sh
+You can then run the script with root privileges:
+sudo ./setup_wordpress_stack.sh
+After running the script, you can view the credentials by opening the wordpress_credentials.txt file:
+cat /root/wordpress_credentials.txt
