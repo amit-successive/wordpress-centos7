@@ -103,4 +103,15 @@ chmod +x wp-cli.phar
 mv wp-cli.phar /usr/local/bin/wp
 $wp_cli --path="/var/www/html/$site_name" core install --url="$site_name" --title="$site_name" --admin_user="$admin_username" --admin_password="$admin_password" --admin_email="$admin_email"
 
+# Store credentials in a file
+credentials_file="/root/wordpress_credentials.txt"
+echo "WordPress Site: $site_name" > $credentials_file
+echo "Database Name: $wordpress_db_name" >> $credentials_file
+echo "Database User: $wordpress_db_user" >> $credentials_file
+echo "Database Password: $wordpress_db_password" >> $credentials_file
+echo "Admin Username: $admin_username" >> $credentials_file
+echo "Admin Password: $admin_password" >> $credentials_file
+echo "Admin Email: $admin_email" >> $credentials_file
+
 echo "WordPress stack setup complete!"
+echo "Credentials saved to: $credentials_file"
